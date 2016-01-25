@@ -1,0 +1,10 @@
+[Oo]bj/
+[Bb]in/
+*.sln.ide/
+*.user
+*.suo
+*.cache
+*.docstates
+project.lock.json
+*.vsp
+*.vs/
