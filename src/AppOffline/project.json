@@ -10,15 +10,9 @@
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-*"
   },
 
-  "tools": {
-    "dotnet-publish-iis": "1.0.0-*"
-  },
-
   "content": [ "wwwroot" ],
 
   "frameworks": {
     "dnxcore50": { }
   },
-
-  "scripts": {"postpublish": "dotnet publish-iis --publish-folder \"%publish:OutputFolder%\\%publish:Configuration%\\dnxcore50\"" }
 }
