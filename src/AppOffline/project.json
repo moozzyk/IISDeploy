@@ -1,16 +1,24 @@
 ﻿{
-    "version": "1.0.0-*",
-    "compilationOptions": {
-        "emitEntryPoint": true
-    },
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
 
-    "dependencies": {
-      "NETStandard.Library": "1.0.0-rc2-23704",
-      "Microsoft.AspNet.IISPlatformHandler": "1.0.0-*",
-      "Microsoft.AspNet.Server.Kestrel": "1.0.0-*"
-    },
+  "dependencies": {
+    "NETStandard.Library": "1.0.0-*",
+    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-*",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-*"
+  },
 
-    "frameworks": {
-        "dnxcore50": { }
-    }
+  "tools": {
+    "dotnet-publish-iis": "1.0.0-*"
+  },
+
+  "content": [ "wwwroot" ],
+
+  "frameworks": {
+    "dnxcore50": { }
+  },
+
+  "scripts": {"postpublish": "dotnet publish-iis --publish-folder \"%publish:OutputFolder%\\%publish:Configuration%\\dnxcore50\"" }
 }
